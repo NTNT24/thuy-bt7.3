@@ -1,4 +1,4 @@
-8601|86 (the band) - True Life Songs and Pictures|14.95
-pf01|Paddlefoot - The first CD|12.95
-pf02|Paddlefoot - The second CD|14.95
-jr01|Joe Rut - Genuine Wood Grained Finish|14.95
+jn01|Jennie - RUBY|12.99
+ro01|Rose & Bruno Mars - Apt|19.99
+br01|Lady Gaga & Bruno Mars - Die With A Smile|19.99
+cp01|Charlie Puth - CHARLIE|14.98

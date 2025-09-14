@@ -22,11 +22,14 @@ public class Cart implements Serializable {
     public void addItem(LineItem item) {
         String code = item.getProduct().getCode();
         int quantity = item.getQuantity();
-        for (LineItem cartItem : items) {
-            if (cartItem.getProduct().getCode().equals(code)) {
-                cartItem.setQuantity(quantity);
-                return;
-            }
+        for (int i = 0; i < items.size(); i++){
+        	LineItem lineItem = items.get(i);
+        	if(lineItem.getProduct().getCode().equals(code)) {
+        		int newQuantity = lineItem.getQuantity() + quantity;
+        		lineItem.setQuantity(newQuantity);
+        		return;
+        	}
+        	
         }
         items.add(item);
     }
@@ -41,4 +44,19 @@ public class Cart implements Serializable {
             }
         }
     }
+    
+    public void updateItem(String code, int quantity) {
+        for (LineItem lineItem : items) {
+            if (lineItem.getProduct().getCode().equals(code)) {
+                if (quantity > 0) {
+                    lineItem.setQuantity(quantity); // gán thẳng số lượng mới
+                } else {
+                    items.remove(lineItem); // số lượng 0 thì xóa luôn
+                }
+                return;
+            }
+        }
+    }
+
+    
 }
